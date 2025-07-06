@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Pribadi - Syakila Triana Lestari</title>
+  <style>
+    :root {
+      --biru-tua: #0D47A1;
+      --biru-muda: #1976D2;
+      --biru-hover: #64B5F6;
+      --latar: #E3F2FD;
+      --konten: #FFFFFF;
+      --teks: #212121;
+      --footer: #BBDEFB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--latar);
+      color: var(--teks);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--biru-tua);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--biru-muda);
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: var(--biru-hover);
+    }
+
+    main {
+      background-color: var(--konten);
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: var(--biru-tua);
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: var(--footer);
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Syakila Triana Lestari</h1>
+      <p>NIM: 2303010102</p>
+      <p>Web Pribadi - Sistem Operasi</p>
+    </div>
+  </header>
+
+  <nav>
+    <a onclick="showTugas('tugas1')">Tugas 1</a>
+    <a onclick="showTugas('tugas2')">Tugas 2</a>
+  </nav>
+
+  <main class="container">
+    <section id="tugas1" class="active">
+      <h2>Tugas 1 - Konsep Dasar Sistem Operasi</h2>
+      <p><strong>Nama:</strong> Syakila Triana Lestari</p>
+      <p><strong>NIM:</strong> 2303010102</p>
+      <p>
+        Track yang perlu diakses:
+1600, 1050, 1775, 1950, 130, 825, 75, 1300, 1450, 600, 700, 
+1600, 1050, 30, 1900, 2004, 700, 1300, 55, 425, 102, 700, 1600, 200
+
+Posisi head awal: 1234
+Jumlah track: 2000
+
+      </p>
+    </section>
+
+    <section id="tugas2">
+      <h2>Tugas 2 - Jenis-Jenis Sistem Operasi</h2>
+      <p><strong>Nama:</strong> Syakila Triana Lestari</p>
+      <p><strong>NIM:</strong> 2303010102</p>
+      <ul>
+        <li><strong>Batch OS:</strong> Menjalankan serangkaian pekerjaan tanpa interaksi pengguna.</li>
+        <li><strong>Time-Sharing OS:</strong> Mendukung banyak pengguna secara bersamaan.</li>
+        <li><strong>Real-Time OS:</strong> Sistem dengan waktu respons cepat, digunakan pada perangkat kritikal.</li>
+        <li><strong>Distributed OS:</strong> Mengelola beberapa komputer dan membuatnya terlihat seperti satu sistem tunggal.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Syakila Triana Lestari | Sistem Operasi
+  </footer>
+
+  <script>
+    function showTugas(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        section.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
